@@ -1,0 +1,25 @@
+<div class="instructors-container">
+  <h2>Meet Our Instructors</h2>
+  <div class="instructors-wrapper">
+    <div class="instructor-card" *ngFor="let instructor of instructors">
+      <div class="instructor-photo">
+        <img [src]="instructor.photo" alt="{{ instructor.name }}">
+      </div>
+      <div class="instructor-details">
+        <h3>{{ instructor.name }}</h3>
+        <p><strong>Age:</strong> {{ calculateAge(instructor.dob) }} years</p>
+        <p><strong>Date of Birth:</strong> {{ instructor.dob | date: 'longDate' }}</p>
+        <p>
+          <strong>Styles:</strong>
+          <span class="highlighted-style" *ngFor="let style of instructor.styles">
+            {{ style }}
+          </span>
+        </p>
+        <a [href]="instructor.instagram" target="_blank" class="btn btn-outline-primary">
+          Follow on Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-outline-secondary back-button" (click)="goBack()">Back</button>
+</div>

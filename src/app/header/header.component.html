@@ -1,0 +1,27 @@
+<header [ngClass]="{'transparent': isTransparent, 'hidden': isHidden}">
+    <div class="logo">
+      <img routerLink="/" src="./assets/Logo.png" alt="Dance Classes Logo">
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li>
+          <a routerLink="/class-information" class="nav-link" routerLinkActive="active">Instructors Information</a>
+        </li>
+        <li>
+            <a routerLink="/contact-us" class="nav-link" routerLinkActive="active">Contact Us</a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav [class.active]="isMenuActive">
+    <div class="menu-toggle" (click)="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+  </nav>
+  

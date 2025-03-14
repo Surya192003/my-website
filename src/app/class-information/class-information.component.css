@@ -1,0 +1,130 @@
+.container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20rem; /* Adds consistent spacing between buttons */
+}
+
+.style-button {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    border: none;
+    border-radius: 25px;
+    font-size: 2rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.classical-btn {
+    background: linear-gradient(135deg, #2A2D7C 0%, #4A00E0 100%);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.non-classical-btn {
+    background: linear-gradient(135deg, #E63946 0%, #FF7F50 100%);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.style-button:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.style-button:active {
+    transform: translateY(0);
+}
+
+/* Shine Effect */
+.style-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,255,255,0.15),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.style-button:hover::after {
+    animation: shine 1.5s;
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+/* Text Shadow */
+.style-button span {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+    .style-button {
+        width: 280px;
+        height: 280px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .style-button {
+        width: 260px;
+        height: 260px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .style-button {
+        width: 240px;
+        height: 240px;
+        font-size: 1.4rem;
+        margin: 0.5rem;
+    }
+}
