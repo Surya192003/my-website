@@ -28,9 +28,9 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.2.2",
-    "@angular/cli": "^19.2.2",
-    "@angular/compiler-cli": "^19.2.2",
+    "@angular-devkit/build-angular": "^19.2.2",  // Align version to match Angular 19
+    "@angular/cli": "^19.2.2",  // Update CLI to match Angular 19
+    "@angular/compiler-cli": "^19.2.2",  // Same for compiler CLI
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -38,6 +38,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "^5.8.2"
+    "typescript": "5.8.2"  // Align TypeScript version with Angular 19's requirements
   }
 }
