@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ClassInformationComponent } from './class-information/class-information.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CommonModule } from '@angular/common';
 import { faFacebookF, faInstagram, faWhatsapp, faSnapchat } from '@fortawesome/free-brands-svg-icons';
 import { ClassicalStylesComponent } from './classical-styles/classical-styles.component';
 import { NonClassicalStylesComponent } from './non-classical-styles/non-classical-styles.component';
@@ -27,7 +27,7 @@ import { NonClassicalStylesComponent } from './non-classical-styles/non-classica
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

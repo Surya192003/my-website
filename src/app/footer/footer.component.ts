@@ -16,5 +16,5 @@ export class FooterComponent {
   faFacebook = faFacebookF;
   faInstagram = faInstagram;
   faWhatsapp = faWhatsapp;
-  faEnvelope = faEnvelope; // Use directly from free-solid-svg-icons
+  faEnvelope = faEnvelope; 
 }
