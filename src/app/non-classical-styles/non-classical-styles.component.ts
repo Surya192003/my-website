@@ -9,15 +9,15 @@ import { Location } from '@angular/common';
 export class NonClassicalStylesComponent {
   instructors = [
     {
-      name: 'John Doe',
+      name: 'Prudhvi Raju',
       dob: new Date(2003, 1, 21), // Feb 21, 2003
       styles: ['Hip Hop', 'Contemporary', 'Western', 'Mass'],
-      achievements: ['Winner of SRM Dance Competetion', 'Founder of Hinter X Crew'],
+      achievements: ['Winner of SRM Dance Competetion', 'Founder of Hunter X Crew'],
       instagram: 'https://www.instagram.com/prudhvirajupenumatsa',
       photo: '/assets/Prudvi_photo.jpeg'
     },
     {
-      name: 'Jane Smith',
+      name: 'Surya Pranav Varma',
       dob: new Date(2003, 0, 19), // Jan 19, 2003
       styles: ['Western', 'Mass'],
       achievements: ['Member of Hunter X Crew'],

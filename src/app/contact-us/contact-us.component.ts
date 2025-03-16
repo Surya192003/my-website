@@ -19,4 +19,14 @@ export class ContactUsComponent {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   }
+
+  copyNumber(number: string) {
+    navigator.clipboard.writeText(number)
+      .then(() => {
+        alert('Number copied to clipboard: ' + number);
+      })
+      .catch((err) => {
+        console.error('Failed to copy number: ', err);
+      });
+  }
 }
