@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="stage">
   <div class="campfire">
     <div class="sparks">
@@ -141,4 +141,46 @@
     </div>
   </div>
   <p (click)="goBack()" class="note">Note: This page will be updated soon. Please click to go back!</p>
+</div> -->
+
+<div class="instructors-container">
+  <h2>Meet Our Instructors</h2>
+  <div class="instructors-wrapper">
+    <div class="instructor-card" *ngFor="let instructor of instructors">
+      <!-- Left Section: Photo -->
+      <div class="instructor-photo">
+        <img [src]="instructor.photo" alt="{{ instructor.name }}">
+      </div>
+
+      <!-- Right Section: Details -->
+      <div class="instructor-info">
+        <h3>{{ instructor.name }}</h3>
+        <p><strong>Age:</strong> {{ calculateAge(instructor.dob) }} years</p>
+        <p><strong>Date of Birth:</strong> {{ instructor.dob | date: 'longDate' }}</p>
+        
+        <!-- Dance Styles -->
+        <p><strong>Styles:</strong></p>
+        <div class="styles-list">
+          <span class="highlighted-style" *ngFor="let style of instructor.styles">
+            {{ style }}
+          </span>
+        </div>
+
+        <!-- Achievements -->
+        <p><strong>Achievements:</strong></p>
+        <ul class="achievements-list" *ngIf="instructor.achievements?.length">
+          <li *ngFor="let achievement of instructor.achievements">{{ achievement }}</li>
+        </ul>
+        <p *ngIf="!instructor.achievements?.length">No achievements listed</p>
+
+        <!-- Instagram Link -->
+        <a [href]="instructor.instagram" target="_blank" class="btn btn-outline-primary">
+          Follow on Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-outline-secondary back-button" (click)="goBack()">Back</button>
 </div>
+
